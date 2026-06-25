@@ -4,6 +4,14 @@ export default defineNuxtConfig({
   compatibilityDate: '2026-05-18',
   devtools: { enabled: false },
 
+  components: [
+    '~/components/docs',
+    {
+      path: '~/components/nova',
+      pathPrefix: false,
+    },
+  ],
+
   modules: ['vuetify-nuxt-module', '@nuxtjs/google-fonts'],
 
   css: ['~/assets/styles/nova/index.scss', '@mdi/font/css/materialdesignicons.min.css'],
