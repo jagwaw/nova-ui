@@ -1,0 +1,107 @@
+import type { ThemeDefinition } from 'vuetify'
+
+const shared = {
+  'nova-void': '#0a0a0f',
+  'nova-surface': '#12121a',
+  'nova-elevated': '#1a1a26',
+  'nova-border': '#2a2a3d',
+  'nova-violet': '#8b5cf6',
+  'nova-indigo': '#6366f1',
+  'nova-success': '#22c55e',
+  'nova-warning': '#f59e0b',
+  'nova-error': '#ef4444',
+  'nova-info': '#38bdf8',
+} as const
+
+export const novaTheme: Record<string, ThemeDefinition> = {
+  novaDark: {
+    dark: true,
+    colors: {
+      background: shared['nova-void'],
+      surface: shared['nova-surface'],
+      'surface-bright': shared['nova-elevated'],
+      'surface-light': shared['nova-elevated'],
+      'surface-variant': shared['nova-elevated'],
+      'on-surface-variant': '#a1a1b5',
+      primary: shared['nova-violet'],
+      'primary-darken-1': '#7c3aed',
+      secondary: shared['nova-indigo'],
+      error: shared['nova-error'],
+      info: shared['nova-info'],
+      success: shared['nova-success'],
+      warning: shared['nova-warning'],
+      'on-background': '#f4f4f8',
+      'on-surface': '#e8e8f0',
+    },
+    variables: {
+      'border-color': shared['nova-border'],
+      'border-opacity': 0.6,
+      'high-emphasis-opacity': 0.95,
+      'medium-emphasis-opacity': 0.72,
+      'disabled-opacity': 0.38,
+      'idle-opacity': 0.06,
+      'hover-opacity': 0.08,
+      'focus-opacity': 0.12,
+      'selected-opacity': 0.14,
+      'activated-opacity': 0.16,
+      'pressed-opacity': 0.2,
+      'dragged-opacity': 0.16,
+      'theme-kbd': '#2a2a3d',
+      'theme-on-kbd': '#f4f4f8',
+      'theme-code': shared['nova-elevated'],
+      'theme-on-code': '#c4b5fd',
+    },
+  },
+  novaLight: {
+    dark: false,
+    colors: {
+      background: '#f8f8fc',
+      surface: '#ffffff',
+      'surface-bright': '#ffffff',
+      'surface-light': '#f4f4f8',
+      'surface-variant': '#ececf4',
+      'on-surface-variant': '#5c5c72',
+      primary: '#7c3aed',
+      'primary-darken-1': '#6d28d9',
+      secondary: '#4f46e5',
+      error: '#dc2626',
+      info: '#0284c7',
+      success: '#16a34a',
+      warning: '#d97706',
+      'on-background': '#12121a',
+      'on-surface': '#1a1a26',
+    },
+    variables: {
+      'border-color': '#d4d4e0',
+      'border-opacity': 0.8,
+    },
+  },
+}
+
+export const novaTokens = {
+  colors: shared,
+  spacing: {
+    xs: '4px',
+    sm: '8px',
+    md: '16px',
+    lg: '24px',
+    xl: '32px',
+    '2xl': '48px',
+  },
+  radius: {
+    sm: '6px',
+    md: '10px',
+    lg: '14px',
+    xl: '20px',
+  },
+  typography: {
+    fontHeading: '"Space Grotesk", system-ui, sans-serif',
+    fontBody: '"Inter", system-ui, sans-serif',
+    fontMono: '"JetBrains Mono", ui-monospace, monospace',
+  },
+  elevation: {
+    card: '0 4px 24px rgba(0, 0, 0, 0.35)',
+    dialog: '0 24px 64px rgba(0, 0, 0, 0.55)',
+    toast: '0 8px 32px rgba(0, 0, 0, 0.4)',
+  },
+} as const

@@ -1,0 +1,40 @@
+@use 'tokens' as *;
+
+.nv-density-compact {
+  --nv-control-height: 32px;
+  --nv-control-padding-x: 10px;
+  --nv-control-font-size: 0.8125rem;
+}
+
+.nv-density-comfortable {
+  --nv-control-height: 40px;
+  --nv-control-padding-x: 14px;
+  --nv-control-font-size: 0.875rem;
+}
+
+.nv-density-spacious {
+  --nv-control-height: 48px;
+  --nv-control-padding-x: 18px;
+  --nv-control-font-size: 0.9375rem;
+}
+
+.nv-glass-card {
+  background: rgba($nova-elevated, 0.72);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba($nova-border, 0.6);
+  border-radius: $nova-radius-lg;
+  box-shadow: $nova-elevation-card;
+}
+
+.nv-trust-border {
+  border: 1px solid rgba($nova-border, 0.55);
+}
+
+.nv-agent-alert--info {
+  border-left: 3px solid $nova-info;
+}
+
+.nv-agent-alert--urgent {
+  border-left: 3px solid $nova-error;
+  background: rgba($nova-error, 0.08);
+}

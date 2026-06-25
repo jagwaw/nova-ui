@@ -1,0 +1,31 @@
+// NovaUI design tokens — SCSS variables mapped to Vuetify theme
+$nova-void: #0a0a0f;
+$nova-surface: #12121a;
+$nova-elevated: #1a1a26;
+$nova-border: #2a2a3d;
+$nova-violet: #8b5cf6;
+$nova-indigo: #6366f1;
+$nova-success: #22c55e;
+$nova-warning: #f59e0b;
+$nova-error: #ef4444;
+$nova-info: #38bdf8;
+
+$nova-font-heading: 'Space Grotesk', system-ui, sans-serif;
+$nova-font-body: 'Inter', system-ui, sans-serif;
+$nova-font-mono: 'JetBrains Mono', ui-monospace, monospace;
+
+$nova-radius-sm: 6px;
+$nova-radius-md: 10px;
+$nova-radius-lg: 14px;
+
+$nova-spacing-xs: 4px;
+$nova-spacing-sm: 8px;
+$nova-spacing-md: 16px;
+$nova-spacing-lg: 24px;
+$nova-spacing-xl: 32px;
+$nova-spacing-2xl: 48px;
+
+$nova-radius-xl: 20px;
+
+$nova-elevation-card: 0 4px 24px rgba(0, 0, 0, 0.35);
+$nova-elevation-dialog: 0 24px 64px rgba(0, 0, 0, 0.55);

@@ -1,0 +1,155 @@
+@use 'tokens' as *;
+@use 'density';
+
+:root {
+  font-family: $nova-font-body;
+}
+
+body {
+  background: $nova-void;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.nv-heading {
+  font-family: $nova-font-heading;
+  letter-spacing: -0.02em;
+}
+
+.nv-mono,
+code,
+pre {
+  font-family: $nova-font-mono;
+}
+
+.nv-page {
+  min-height: 100vh;
+  background: radial-gradient(ellipse 80% 50% at 50% -20%, rgba($nova-violet, 0.12), transparent),
+    $nova-void;
+}
+
+.nv-container {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 $nova-spacing-lg;
+}
+
+.nv-section-title {
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin-bottom: $nova-spacing-md;
+}
+
+.nv-section-desc {
+  color: rgba(#e8e8f0, 0.72);
+  max-width: 60ch;
+  line-height: 1.6;
+  margin-bottom: $nova-spacing-xl;
+}
+
+.nv-preview-surface {
+  padding: $nova-spacing-lg;
+  border-radius: $nova-radius-lg;
+  background: rgba($nova-surface, 0.6);
+  border: 1px solid rgba($nova-border, 0.5);
+}
+
+.nv-preview-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: $nova-spacing-md;
+}
+
+.nv-code-block {
+  position: relative;
+  margin-top: $nova-spacing-md;
+  border-radius: $nova-radius-md;
+  background: $nova-elevated;
+  border: 1px solid rgba($nova-border, 0.6);
+  overflow: hidden;
+
+  pre {
+    margin: 0;
+    padding: $nova-spacing-md;
+    font-size: 0.8125rem;
+    line-height: 1.6;
+    overflow-x: auto;
+    color: #c4b5fd;
+  }
+}
+
+.nv-copy-btn {
+  position: absolute;
+  top: $nova-spacing-sm;
+  right: $nova-spacing-sm;
+}
+
+.nv-do-dont-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: $nova-spacing-md;
+  margin-top: $nova-spacing-lg;
+}
+
+.nv-do-card,
+.nv-dont-card {
+  padding: $nova-spacing-md;
+  border-radius: $nova-radius-md;
+  border: 1px solid rgba($nova-border, 0.5);
+}
+
+.nv-do-card {
+  border-left: 3px solid $nova-success;
+}
+
+.nv-dont-card {
+  border-left: 3px solid $nova-error;
+}
+
+.nv-a11y-list {
+  margin: $nova-spacing-md 0 0;
+  padding-left: 1.25rem;
+  line-height: 1.7;
+  color: rgba(#e8e8f0, 0.8);
+}
+
+.nv-props-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: $nova-spacing-md;
+  font-size: 0.875rem;
+
+  th,
+  td {
+    text-align: left;
+    padding: $nova-spacing-sm $nova-spacing-md;
+    border-bottom: 1px solid rgba($nova-border, 0.5);
+    vertical-align: top;
+  }
+
+  th {
+    font-family: $nova-font-mono;
+    font-weight: 500;
+    color: $nova-violet;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+
+  code {
+    font-size: 0.8125rem;
+    color: #c4b5fd;
+  }
+}
+
+.nv-hero-gradient {
+  background: linear-gradient(135deg, rgba($nova-violet, 0.2), rgba($nova-indigo, 0.08));
+  border: 1px solid rgba($nova-border, 0.5);
+  border-radius: $nova-radius-xl;
+  padding: $nova-spacing-2xl;
+}
